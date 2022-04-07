@@ -1,23 +1,10 @@
 [
-{"sent": "To be or not to be, that is the question.", "imgs": []},
-{"sent": "A bathroom with walls that are painted baby blue.", "imgs": ["000000322141.jpg"]},
-{"sent": "May the force be with you.", "imgs": []},
-{"sent": "A couple of cars parked in a busy street sidewalk.", "imgs": ["000000016977.jpg"]},
-{"sent": "A passenger plane taking off into the sky. ", "imgs": []},
-{"sent": "Bathroom containing a toilet, a sink and a wicker basket.", "imgs": ["000000571635.jpg"]},
-{"sent": "a room that has a stove and a icebox in it", "imgs": []},
-{"sent": "A bathroom sink cluttered with multiple personal care items.", "imgs": ["000000315702.jpg"]},
-{"sent": "An open box contains an unknown, purple object", "imgs": []},
-{"sent": "An antique, turquoise car is parked at the curb", "imgs": ["000000472598.jpg"]},
-{"sent": "A kitchen with a stove, sick, and dishes", "imgs": []},
-{"sent": "A group of motorcycles drive down a city street.", "imgs": ["000000126657.jpg"]},
-{"sent": "A cat is drinking water out of a toilet.", "imgs": []},
-{"sent": "A bathroom with pedestal sink and mirror over it.", "imgs": ["000000230610.jpg"]},
-{"sent": "An Indian man in religious attire sitting with a decorated cow.", "imgs": []},
-{"sent": "A series of motorbikes parked in a row on a street", "imgs": ["000000459912.jpg"]},
-{"sent": "A kitten is sitting in a bowl on a table.", "imgs": []},
-{"sent": "A man taking a drink from a water fountain.", "imgs": ["000000052087.jpg"]},
-{"sent": "A skateboarder sitting on the edge of an open field.", "imgs": []},
-{"sent": "A very large plane is flying through the sky.", "imgs": ["000000226419.jpg"]},
-{"sent": "The grass is always greener on the other side.", "imgs": []}
+    
+    {"id": "000000037777", "config": "labels_crop"},
+    {"id": "000000041888", "config": "clear_crop"},
+    {"id": "000000006818", "config": "labels_all"},
+    {"id": "000000087038", "config": "labels_text"},
+    {"id": "000000017627", "config": "clear_all"},
+    {"id": "000000058636", "config": "no_image"},
+    {"id": "000000143931", "config": "original"}
 ]

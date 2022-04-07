@@ -10,4 +10,15 @@
 #multimodality img {
     max-width: 400px;
     max-height: 400px;
+    vertical-align: top;
+    padding: 2px;
+}
+
+#multimodality {
+    height: 430px;
+    width: 100%;
+    overflow: scroll;
+    border: 2px solid black;
+    padding: 2px;
+    font-size: 4ex;
 }
