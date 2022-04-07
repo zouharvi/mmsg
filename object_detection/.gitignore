@@ -1,0 +1,3 @@
+*.pt
+boxes.pkl
+captions_val2017.json
