@@ -11,18 +11,8 @@ from copy import deepcopy
 # labels
 # model.names
 
-data_control = []
-
-with open("captions_val2017.json", "r") as f:
-    data_coco = json.load(f)
-
-for img in data_coco["images"][:32]:
-    # this is an inefficient but quick way to match annotations
-    data_control.append({
-        "url": img["coco_url"],
-        "id": img["id"],
-        "captions": [ann["caption"] for ann in data_coco["annotations"] if img["id"] == ann["image_id"]]
-    })
+with open("sents_length.json", "r") as f:
+    data_control = json.load(f)
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 results = model([img["url"] for img in data_control][:32])
@@ -88,5 +78,5 @@ for i, (img, result) in enumerate(zip(data_control, results)):
     with open(img_dir+"meta.json", "w") as f:
         f.write(json.dumps({
             "labels": [x["label"] for x in result_lc],
-            "caption": img["captions"]
+            "caption": img["caption"]
         }))
