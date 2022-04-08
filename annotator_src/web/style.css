@@ -23,11 +23,28 @@
     padding: 2px;
 }
 
-#multimodality {
-    height: 430px;
-    width: 100%;
-    overflow: scroll;
+#multimodality, #buttons_selfeval {
     border: 2px solid black;
     padding: 2px;
-    font-size: 4ex;
+    width: 100%;
+}
+
+#multimodality {
+    height: 430px;
+    overflow: scroll;
+    font-size: 3ex;
+}
+
+#buttons_selfeval {
+    height: 430px;
+    background-color: #0000000e;
+    font-size: 3ex;
+    text-align: center;
+    display: none;
+}
+
+#buttons_selfeval input {
+    width: 500px;
+    height: 30px;
+    font-size: 1.5ex;
 }

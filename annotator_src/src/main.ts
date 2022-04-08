@@ -7,21 +7,41 @@ $("#button_1").on("click", () => rate(1))
 $("#button_2").on("click", () => rate(2))
 $("#button_3").on("click", () => rate(3))
 $("#button_4").on("click", () => rate(4))
+$("#button_se_0").on("click", () => selfeval(0))
+$("#button_se_1").on("click", () => selfeval(1))
+$("#button_se_2").on("click", () => selfeval(2))
+$("#button_se_3").on("click", () => selfeval(3))
+$("#button_se_4").on("click", () => selfeval(4))
 
 var data: any[] = []
 let sent_i = -1
 let word_i = -1
 let cur_sent_words: string[] = []
 let cur_sent_text = ""
-let sent_data: { sent: string, time: number, config: string, id: string, ratings: [number, number][] } | null = null
+let sent_data: { sent: string, time: number, config: string, id: string, ratings: [[number, number], [number, number]][] } | null = null
 let prev_time = Date.now()
 let loaded = false
 
 function rate(value: number) {
     let new_time = Date.now()
-    sent_data!.ratings.push([new_time - prev_time, value])
+    sent_data!.ratings.push([[new_time - prev_time, value], [-1, -1]])
     prev_time = new_time
+
     next_word()
+
+    $("#buttons_panel").hide()
+    $("#multimodality").hide()
+    $("#buttons_selfeval").show()
+}
+
+function selfeval(value: number) {
+    $("#buttons_panel").show()
+    $("#multimodality").show()
+    $("#buttons_selfeval").hide()
+
+    let new_time = Date.now()
+    sent_data!.ratings[sent_data!.ratings.length - 1][1] = [new_time - prev_time, value]
+    prev_time = new_time
 }
 
 function update_progress() {

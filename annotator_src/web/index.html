@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto&display=swap'>
-    <link rel='stylesheet' type='text/css' href='style.css?v=0'>
+    <link rel='stylesheet' type='text/css' href='style.css?random=1'>
 </head>
 
 <body style='text-align: center; margin-bottom: 20px; background-color: #f4f4f4;'>
@@ -26,14 +26,24 @@
             Begin by clicking "next sentence".
             <!-- <img src="img/no_image.png"> -->
         </div>
+
+        <div id="buttons_selfeval">
+            <p style="margin-top: 120px;">Please evaluate your prediction:</p>
+            <input id="button_se_0" style="background-color: rgb(214, 150, 150)" type="button" value="(x) Unable to evaluate">
+            <input id="button_se_1" style="background-color: rgb(224, 204, 162)" type="button" value="(1) I was very wrong">
+            <input id="button_se_2" style="background-color: rgb(227, 233, 151)" type="button" value="(2) Wrong but the idea was right">
+            <input id="button_se_3" style="background-color: rgb(153, 206, 153)" type="button" value="(3) Very close">
+            <input id="button_se_4" style="background-color: rgb(90, 196, 76)" type="button" value="(4) Completely right">
+        </div>
+        
         
         <br>
         
-        <div id="button_panel" style="display: inline-block; width: 300px;">
+        <div id="buttons_panel" style="display: inline-block; width: 300px;">
             <div id="buttons_rate">        
                 <input id="button_0" style="background-color: rgb(214, 150, 150)" type="button" value="0">
-                <input id="button_1" style="background-color: rgb(223, 224, 162)" type="button" value="1">
-                <input id="button_2" style="background-color: rgb(208, 211, 166)" type="button" value="2">
+                <input id="button_1" style="background-color: rgb(224, 204, 162)" type="button" value="1">
+                <input id="button_2" style="background-color: rgb(227, 233, 151)" type="button" value="2">
                 <input id="button_3" style="background-color: rgb(153, 206, 153)" type="button" value="3">
                 <input id="button_4" style="background-color: rgb(90, 196, 76)" type="button" value="4">
             </div>
@@ -47,6 +57,7 @@
         TODO: instructions
     </div>
     
-    <script src='mmsg-web.js'></script>
+    <!-- <script src='mmsg-web.js?random=<?php echo filemtime('mmsg-web.js'); ?>'></script> -->
+    <script src='mmsg-web.js?random=0'></script>
 </body>
 </html>
