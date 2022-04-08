@@ -1,7 +1,5 @@
 [
-    
     {"id": "000000037777", "config": "labels_crop"},
-    {"id": "000000041888", "config": "clear_crop"},
     {"id": "000000006818", "config": "labels_all"},
     {"id": "000000087038", "config": "labels_text"},
     {"id": "000000017627", "config": "clear_all"},

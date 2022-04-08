@@ -30,8 +30,12 @@ module.exports = (env, argv) => {
       },
       plugins: [
          new webpack.DefinePlugin({
-            DEVMODE: !!(argv.mode == 'development')
+            _DEVMODE: !!(argv.mode == 'development')
          })
-      ]
+      ],
+      // ignore file size warning
+      performance: {
+         hints: false,
+      },
    }
 };
