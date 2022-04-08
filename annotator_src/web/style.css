@@ -2,9 +2,18 @@
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-#button_panel input {
+#buttons_rate input {
     width: 50px;
     height: 30px;
+}
+
+#buttons_rate {
+    display: none;
+}
+
+#button_next {
+    height: 30px;
+    width: 250px;
 }
 
 #multimodality img {

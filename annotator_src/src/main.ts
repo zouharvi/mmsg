@@ -9,6 +9,7 @@ let sent_i = -1
 let word_i = -1
 let cur_sent_words: string[] = []
 let cur_sent_text = ""
+let loaded = false
 
 function rate(value: number) {
     next_word()
@@ -19,12 +20,12 @@ function load_data() {
         "data/queue_01.json",
         (new_data) => {
             data = new_data
-            console.log(data)
             update_progress()
-            next_sentence()
+            loaded = true
         }
     )
 }
+
 
 function update_progress() {
     $("#progress").text((sent_i + 1).toString() + "/" + (data.length).toString())
@@ -33,8 +34,8 @@ function update_progress() {
 function next_sentence() {
     sent_i += 1
     if (sent_i >= data.length) {
-        alert("Annotations done.")
-        return
+        alert("Annotations done, please wait a few seconds after closing this alert to allow for data synchronization.")
+        sent_i = 0
     }
 
     cur_sent_text = ""
@@ -81,13 +82,24 @@ function update_sentence_display() {
 
 function next_word() {
     word_i += 1
-    if (word_i >= cur_sent_words.length) {
-        next_sentence()
-        return
+
+    // last word
+    if (word_i == cur_sent_words.length - 1) {
+        $("#button_next").show();
+        $("#buttons_rate").hide();
     }
 
     cur_sent_text += " " + cur_sent_words[word_i]
     update_sentence_display()
 }
+
+$("#button_next").on("click", () => {
+    if (!loaded) {
+        return
+    }
+    $("#button_next").hide();
+    $("#buttons_rate").show();
+    next_sentence()
+})
 
 load_data()
