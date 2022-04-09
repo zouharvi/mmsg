@@ -68,7 +68,7 @@ function next_sentence() {
         sent_data = { sent: metadata["caption"][0], time: Date.now(), config: data[sent_i]["config"], id: data[sent_i]["id"], ratings: [] }
         prev_time = Date.now()
 
-        cur_sent_words = metadata["caption"][0].split(" ")
+        cur_sent_words = metadata["caption"].split(" ")
 
         $("#multimodality").html("")
         $("#config_info").html("Mode: " + data[sent_i]["config"])
@@ -124,11 +124,7 @@ $("#button_next").on("click", () => {
     next_sentence()
 })
 
-load_data().then((new_data) => {
-    data = new_data
-    update_progress()
-    loaded = true
-})
+// get user id and load queue
 
 if (DEVMODE) {
     UID = "tuvalu"
@@ -140,4 +136,16 @@ if (DEVMODE) {
     UID = UID_maybe!
 }
 
-console.log("Starting session with UID:", UID)
+load_data().catch((_error) => {
+    alert("Invalid user id")
+    window.location.reload()
+}
+).then((new_data) => {
+    data = new_data
+    update_progress()
+    loaded = true
+})
+
+console.log("Starting session with UID:", UID!)
+
+

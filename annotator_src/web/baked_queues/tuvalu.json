@@ -1,66 +1,66 @@
 [
     {
-        "id": 475779,
+        "id": "000000475779",
         "config": "no_image"
     },
     {
-        "id": 301867,
+        "id": "000000301867",
         "config": "original"
     },
     {
-        "id": 312421,
+        "id": "000000312421",
         "config": "labels_crop"
     },
     {
-        "id": 185250,
+        "id": "000000185250",
         "config": "labels_crop"
     },
     {
-        "id": 356427,
+        "id": "000000356427",
         "config": "labels_crop"
     },
     {
-        "id": 572517,
+        "id": "000000572517",
         "config": "original"
     },
     {
-        "id": 270244,
+        "id": "000000270244",
         "config": "labels_all"
     },
     {
-        "id": 125211,
+        "id": "000000125211",
         "config": "no_image"
     },
     {
-        "id": 562121,
+        "id": "000000562121",
         "config": "no_image"
     },
     {
-        "id": 16228,
+        "id": "000000016228",
         "config": "labels_crop"
     },
     {
-        "id": 266409,
+        "id": "000000266409",
         "config": "clear_all"
     },
     {
-        "id": 476258,
+        "id": "000000476258",
         "config": "labels_crop"
     },
     {
-        "id": 349860,
+        "id": "000000349860",
         "config": "labels_text"
     },
     {
-        "id": 486438,
+        "id": "000000486438",
         "config": "labels_crop"
     },
     {
-        "id": 502737,
+        "id": "000000502737",
         "config": "labels_crop"
     },
     {
-        "id": 355257,
+        "id": "000000355257",
         "config": "no_image"
     }
 ]

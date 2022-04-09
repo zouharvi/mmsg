@@ -44,7 +44,8 @@ for uid in UID:
     queue = []
     for img_i, img in enumerate(data):
         config = random.sample(CONFIGS, k=1)[0]
-        queue.append({"id": img["img_id"], "config": config})
+        img_id_s = img["url"].split("/")[-1].rstrip(".jpg")
+        queue.append({"id": img_id_s, "config": config})
         buckets[img_i].add(config)
 
     with open(f"baked_queues/{'dev/' if args.dev else 'real/'}{uid}.json", "w") as f:
