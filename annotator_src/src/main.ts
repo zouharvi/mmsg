@@ -131,7 +131,7 @@ if (DEVMODE) {
 } else {
     let UID_maybe = null
     while (UID_maybe == null) {
-        UID_maybe = prompt("Enter your user id:")
+        UID_maybe = prompt("Enter your user id. Please get in touch if you were not assigned an id but wish to participate in this experiment.")
     }
     UID = UID_maybe!
 }

@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto&display=swap'>
-    <link rel='stylesheet' type='text/css' href='style.css?random=2'>
+    <link rel='stylesheet' type='text/css' href='style.css?r=4'>
 </head>
 
 <body style='text-align: center; margin-bottom: 20px; background-color: #f4f4f4;'>
@@ -39,8 +39,9 @@
         
         <br>
         
-        <div id="buttons_panel" style="display: inline-block; width: 300px;">
+        <div id="buttons_panel" style="display: inline-block; width: 360px;">
             <div id="buttons_rate">        
+                Confidence:
                 <input id="button_0" style="background-color: rgb(214, 150, 150)" type="button" value="0">
                 <input id="button_1" style="background-color: rgb(224, 204, 162)" type="button" value="1">
                 <input id="button_2" style="background-color: rgb(227, 233, 151)" type="button" value="2">
@@ -49,15 +50,32 @@
             </div>
             <input id="button_next" style="background-color: rgb(218, 218, 218)" type="button" value="Next sentence">
         </div>
-        <div id="config_info" style="display: inline-block; width: 200px;  text-align: right;"></div>
-        <div id="progress" style="display: inline-block; width: 50px; text-align: right;">1/10</div>
+        <div style="float: right">
+            <div id="config_info" style="display: inline-block; text-align: right;"></div>
+            <div id="progress" style="display: inline-block; width: 50px; text-align: right;">1/x</div>
+        </div>
+            
+        <div style="margin-top: 50px; text-align: justify;">
+            In this experiment you're going to be predicting the next word in a sentence, starting with the first word.
+            Your task is to think about the next word (a specific word) and then click a number corresponding to how confident you are in your prediction.
+            Value <u>0</u> means that you have no idea about the next word while <u>4</u> means that you are absolutely confident in your prediction.
+            Afterwards, the word is shown and you should evaluate how close your prediction was.
+            Some of the sentences may be accompanied by images, labelled images, a set of labels or snippets of items.
+            You should use these to improve your prediction.
+            <br>
+            <br>
+            The whole session should not last longer than 20-30 minutes.
+            Please take breaks only after you just finished your sentence, before clicking <u>next sentence</u>.
+            This is important as we are evaluating also the reaction times.
+            <br>
+            <br>
+            This experiment is done by <a href="https://ufal.mff.cuni.cz/" style="color: black; font-weight: bold;">ÚFAL @ Charles University</a> by Sunit Bhattacharya, Vilém Zouhar and Ondřej Bojar.
+            Please direct your questions and report any issues to <a href="mailto:zouhar@ufal.mff.cuni.cz" style="color: black; font-weight: bold;">zouhar@ufal.mff.cuni.cz</a>.
+        </div>
     </div>
 
-    <div style="margin-top: 50px;">
-        TODO: instructions
-    </div>
     
     <!-- <script src='mmsg-web.js?random=<?php echo filemtime('mmsg-web.js'); ?>'></script> -->
-    <script src='mmsg-web.js?random=2'></script>
+    <script src='mmsg-web.js?r=4'></script>
 </body>
 </html>

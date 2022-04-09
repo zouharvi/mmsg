@@ -41,7 +41,7 @@ os.makedirs("baked_queues/real/", exist_ok=True)
 buckets = [set() for _ in data]
 
 for uid in UID:
-    queue = []
+    queue = [{"id": "hamlet_to_be", "config": "original"}]
     for img_i, img in enumerate(data):
         config = random.sample(CONFIGS, k=1)[0]
         img_id_s = img["url"].split("/")[-1].rstrip(".jpg")
