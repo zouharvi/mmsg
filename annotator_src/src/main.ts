@@ -65,7 +65,7 @@ function next_sentence() {
             log_sentence(sent_data)
         }
         // clear local logs
-        sent_data = { sent: metadata["caption"][0], time: Date.now(), config: data[sent_i]["config"], id: data[sent_i]["id"], ratings: [] }
+        sent_data = { sent: metadata["caption"], time: Date.now(), config: data[sent_i]["config"], id: data[sent_i]["id"], ratings: [] }
         prev_time = Date.now()
 
         cur_sent_words = metadata["caption"].split(" ")
