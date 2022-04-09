@@ -1,0 +1,114 @@
+[
+    {
+        "url": "http://images.cocodataset.org/val2017/000000475779.jpg",
+        "ann_id": 32959,
+        "img_id": 475779,
+        "caption": "There is an elephant standing near a tree.",
+        "length": 8
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000301867.jpg",
+        "ann_id": 501774,
+        "img_id": 301867,
+        "caption": "Three teenage girls hover under an umbrella while they talk and laugh.",
+        "length": 12
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000312421.jpg",
+        "ann_id": 428710,
+        "img_id": 312421,
+        "caption": "Several middle eastern looking stickers decorate a black briefcase.",
+        "length": 9
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000185250.jpg",
+        "ann_id": 503054,
+        "img_id": 185250,
+        "caption": "a man watches as a dig looks at a toy in the air ",
+        "length": 13
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000356427.jpg",
+        "ann_id": 108498,
+        "img_id": 356427,
+        "caption": "A man standing next to train tracks with bags of luggage.",
+        "length": 11
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000572517.jpg",
+        "ann_id": 315781,
+        "img_id": 572517,
+        "caption": "a polar bear following a big winged bird",
+        "length": 8
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000270244.jpg",
+        "ann_id": 331433,
+        "img_id": 270244,
+        "caption": "A zebra all by itself in the green forest.",
+        "length": 9
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000125211.jpg",
+        "ann_id": 457126,
+        "img_id": 125211,
+        "caption": "A zebra standing on top of a grass covered field.",
+        "length": 10
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000562121.jpg",
+        "ann_id": 400129,
+        "img_id": 562121,
+        "caption": "Two zebras fighting in a open area with green bushes.",
+        "length": 10
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000016228.jpg",
+        "ann_id": 500354,
+        "img_id": 16228,
+        "caption": "A horse pulling a wagon with a conductor down the road. ",
+        "length": 11
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000266409.jpg",
+        "ann_id": 530738,
+        "img_id": 266409,
+        "caption": "The person is standing in the deep snow. The trees are covered with snow.",
+        "length": 14
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000476258.jpg",
+        "ann_id": 406252,
+        "img_id": 476258,
+        "caption": "A skateboarder demonstrates on his skateboard that has a large wheel in the back.",
+        "length": 14
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000349860.jpg",
+        "ann_id": 408013,
+        "img_id": 349860,
+        "caption": "a young man doing a jump with his skateboard in a skate park",
+        "length": 13
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000486438.jpg",
+        "ann_id": 261262,
+        "img_id": 486438,
+        "caption": "A close up of glazed donuts that are plain or with chocolate.",
+        "length": 12
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000502737.jpg",
+        "ann_id": 729424,
+        "img_id": 502737,
+        "caption": "A person holding a cookie with icing that has one of it's arms bitten off.",
+        "length": 15
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000355257.jpg",
+        "ann_id": 227487,
+        "img_id": 355257,
+        "caption": "A woman is laying in a hospital bed and is hooked up to several machines.",
+        "length": 15
+    }
+]

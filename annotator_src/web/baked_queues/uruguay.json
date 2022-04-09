@@ -1,0 +1,66 @@
+[
+    {
+        "id": 475779,
+        "config": "original"
+    },
+    {
+        "id": 301867,
+        "config": "original"
+    },
+    {
+        "id": 312421,
+        "config": "labels_text"
+    },
+    {
+        "id": 185250,
+        "config": "labels_crop"
+    },
+    {
+        "id": 356427,
+        "config": "labels_text"
+    },
+    {
+        "id": 572517,
+        "config": "no_image"
+    },
+    {
+        "id": 270244,
+        "config": "labels_crop"
+    },
+    {
+        "id": 125211,
+        "config": "clear_all"
+    },
+    {
+        "id": 562121,
+        "config": "no_image"
+    },
+    {
+        "id": 16228,
+        "config": "original"
+    },
+    {
+        "id": 266409,
+        "config": "labels_text"
+    },
+    {
+        "id": 476258,
+        "config": "labels_all"
+    },
+    {
+        "id": 349860,
+        "config": "labels_all"
+    },
+    {
+        "id": 486438,
+        "config": "labels_crop"
+    },
+    {
+        "id": 502737,
+        "config": "original"
+    },
+    {
+        "id": 355257,
+        "config": "labels_text"
+    }
+]

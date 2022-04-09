@@ -6,12 +6,17 @@ import json
 import pickle
 from PIL import Image, ImageDraw, ImageFont
 import os
+from argparse import ArgumentParser
 from copy import deepcopy
 
 # labels
 # model.names
 
-with open("sents_length.json", "r") as f:
+args = ArgumentParser()
+args.add_argument("-d", "--dev", action="store_true")
+args = args.parse_args()
+
+with open(f"baked_queues/sents_length{'_dev' if args.dev else ''}.json", "r") as f:
     data_control = json.load(f)
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)

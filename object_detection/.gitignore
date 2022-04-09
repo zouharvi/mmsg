@@ -1,4 +1,5 @@
 *.pt
 boxes.pkl
 captions_val2017.json
-sents_length.json
+baked_queues/dev/*.json
+baked_queues/real/*.json

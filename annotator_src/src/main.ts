@@ -131,7 +131,7 @@ load_data().then((new_data) => {
 })
 
 if (DEVMODE) {
-    UID = "vilda_devtest"
+    UID = "tuvalu"
 } else {
     let UID_maybe = null
     while (UID_maybe == null) {
