@@ -18,7 +18,9 @@ random.seed(args.seed)
 
 UID = [
     "harare", "lusaka", "sahara", "cardiff", "hanoi",
-    "caracas", "montevideo", "washington", "kampala", "fanafuti"
+    "caracas", "montevideo", "washington", "kampala", "funafuti",
+    "ashgabat", "ankara", "tiraspol", "lome", "bangkok",
+    "dodoma", "dushanbe", "damascus", "bern", "stockholm",
 ]
 UID_dev = [
     "zimbabwe", "zambia", "yemen", "wales", "venezuela",

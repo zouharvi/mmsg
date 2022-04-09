@@ -1,0 +1,70 @@
+[
+    {
+        "id": "hamlet_to_be",
+        "config": "original"
+    },
+    {
+        "id": "000000397133",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000037777",
+        "config": "clear_all"
+    },
+    {
+        "id": "000000252219",
+        "config": "original"
+    },
+    {
+        "id": "000000087038",
+        "config": "no_image"
+    },
+    {
+        "id": "000000174482",
+        "config": "clear_all"
+    },
+    {
+        "id": "000000403385",
+        "config": "original"
+    },
+    {
+        "id": "000000006818",
+        "config": "original"
+    },
+    {
+        "id": "000000480985",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000458054",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000331352",
+        "config": "clear_all"
+    },
+    {
+        "id": "000000491497",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000348881",
+        "config": "labels_text"
+    },
+    {
+        "id": "000000181666",
+        "config": "original"
+    },
+    {
+        "id": "000000303818",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000460347",
+        "config": "clear_all"
+    },
+    {
+        "id": "000000308394",
+        "config": "no_image"
+    }
+]
