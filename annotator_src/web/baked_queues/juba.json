@@ -9,7 +9,7 @@
     },
     {
         "id": "000000579307",
-        "config": "labels_crop"
+        "config": "original"
     },
     {
         "id": "000000437898",
@@ -17,51 +17,51 @@
     },
     {
         "id": "000000062554",
-        "config": "no_image"
+        "config": "labels_crop"
     },
     {
         "id": "000000493442",
-        "config": "original"
+        "config": "labels_crop"
     },
     {
         "id": "000000438304",
-        "config": "original"
+        "config": "labels_crop"
     },
     {
         "id": "000000325527",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000553664",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000116439",
-        "config": "no_image"
-    },
-    {
-        "id": "000000008021",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000153011",
         "config": "labels_all"
     },
     {
-        "id": "000000244411",
-        "config": "original"
+        "id": "000000553664",
+        "config": "labels_all"
     },
     {
-        "id": "000000384666",
+        "id": "000000116439",
         "config": "labels_crop"
     },
     {
-        "id": "000000529148",
+        "id": "000000008021",
         "config": "no_image"
     },
     {
-        "id": "000000154431",
+        "id": "000000153011",
         "config": "labels_crop"
+    },
+    {
+        "id": "000000244411",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000384666",
+        "config": "no_image"
+    },
+    {
+        "id": "000000529148",
+        "config": "original"
+    },
+    {
+        "id": "000000154431",
+        "config": "original"
     },
     {
         "id": "000000344268",

@@ -24,7 +24,7 @@ buckets_to_fulfill = defaultdict(lambda: 0) | {
 }
 used_imgs = set()
 ANN_BAN = {407404, 22951, 601937, 164522, 610124, 733653, 825720, 706927}
-IMG_BAN = {}
+IMG_BAN = {450202, 399296, 73118, 389109, 343453}
 buckets = []
 
 with open("captions_val2017.json", "r") as f:

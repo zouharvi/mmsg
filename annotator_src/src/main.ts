@@ -137,16 +137,24 @@ if (DEVMODE) {
     UID = UID_maybe!
 }
 
+// try to see if start override was passed
+const urlParams = new URLSearchParams(window.location.search);
+const startOverride = urlParams.get('start');
+
 load_data().catch((_error) => {
     alert("Invalid user id")
     window.location.reload()
 }
 ).then((new_data) => {
     data = new_data
+    if (startOverride != null) {
+        sent_i = parseInt(startOverride)-1
+        console.log("Starting from", sent_i)
+    }
+
     update_progress()
     loaded = true
+
 })
 
 console.log("Starting session with UID:", UID!)
-
-

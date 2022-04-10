@@ -1,12 +1,5 @@
 [
     {
-        "url": "http://images.cocodataset.org/val2017/000000450202.jpg",
-        "ann_id": 254998,
-        "img_id": 450202,
-        "caption": "A plate filled with food sitting next to three glasses.",
-        "length": 10
-    },
-    {
         "url": "http://images.cocodataset.org/val2017/000000025603.jpg",
         "ann_id": 542142,
         "img_id": 25603,
@@ -28,13 +21,6 @@
         "length": 8
     },
     {
-        "url": "http://images.cocodataset.org/val2017/000000399296.jpg",
-        "ann_id": 827544,
-        "img_id": 399296,
-        "caption": "Hot dogs are being cooked over a fire outside.",
-        "length": 9
-    },
-    {
         "url": "http://images.cocodataset.org/val2017/000000062554.jpg",
         "ann_id": 774636,
         "img_id": 62554,
@@ -42,18 +28,11 @@
         "length": 9
     },
     {
-        "url": "http://images.cocodataset.org/val2017/000000073118.jpg",
-        "ann_id": 379035,
-        "img_id": 73118,
-        "caption": "Two brown teddy bears sitting side by side.",
-        "length": 8
-    },
-    {
         "url": "http://images.cocodataset.org/val2017/000000493442.jpg",
-        "ann_id": 568549,
+        "ann_id": 564124,
         "img_id": 493442,
-        "caption": "Alpine skier in a cloud of snow on a steep slope.",
-        "length": 11
+        "caption": "A woman slashing down a snowy hill on skis.",
+        "length": 9
     },
     {
         "url": "http://images.cocodataset.org/val2017/000000438304.jpg",
@@ -70,11 +49,18 @@
         "length": 11
     },
     {
-        "url": "http://images.cocodataset.org/val2017/000000389109.jpg",
-        "ann_id": 803523,
-        "img_id": 389109,
-        "caption": "The personal sized pizza is on a table in the restaurant full of people.",
-        "length": 14
+        "url": "http://images.cocodataset.org/val2017/000000553664.jpg",
+        "ann_id": 515265,
+        "img_id": 553664,
+        "caption": "A macbook laptop next to a phone, backpack, and various books.",
+        "length": 11
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000116439.jpg",
+        "ann_id": 745202,
+        "img_id": 116439,
+        "caption": "A person sits in a small boat on the water.",
+        "length": 10
     },
     {
         "url": "http://images.cocodataset.org/val2017/000000008021.jpg",
@@ -82,6 +68,13 @@
         "img_id": 8021,
         "caption": "People watching an on screen presentation of a gentleman in a suit.",
         "length": 12
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000153011.jpg",
+        "ann_id": 175205,
+        "img_id": 153011,
+        "caption": "Food trucks are parked around small oval tables.",
+        "length": 8
     },
     {
         "url": "http://images.cocodataset.org/val2017/000000244411.jpg",
@@ -103,6 +96,13 @@
         "img_id": 529148,
         "caption": "Young children sharing a laptop in a messy room with several laptops, books, and papers.",
         "length": 15
+    },
+    {
+        "url": "http://images.cocodataset.org/val2017/000000154431.jpg",
+        "ann_id": 809140,
+        "img_id": 154431,
+        "caption": "A black sculpture of a torso is on the floor next to a TV.",
+        "length": 14
     },
     {
         "url": "http://images.cocodataset.org/val2017/000000344268.jpg",
