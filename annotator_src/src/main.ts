@@ -7,6 +7,7 @@ $("#button_1").on("click", () => rate(1))
 $("#button_2").on("click", () => rate(2))
 $("#button_3").on("click", () => rate(3))
 $("#button_4").on("click", () => rate(4))
+$("#button_se_m").on("click", () => selfeval(-1))
 $("#button_se_0").on("click", () => selfeval(0))
 $("#button_se_1").on("click", () => selfeval(1))
 $("#button_se_2").on("click", () => selfeval(2))
@@ -77,12 +78,12 @@ function next_sentence() {
             $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/original.jpg'>")
         } else if (data[sent_i]["config"] == "labels_all") {
             $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/labels_all.jpg'>")
-        } else if (data[sent_i]["config"] == "clear_all") {
-            $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/clear_all.jpg'>")
-        } else if (data[sent_i]["config"] == "clear_crop") {
-            for (let i = metadata["labels"].length - 1; i >= 0; i--) {
-                $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/clear_crop_" + i.toString() + ".jpg'>")
-            }
+        // } else if (data[sent_i]["config"] == "clear_all") {
+        //     $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/clear_all.jpg'>")
+        // } else if (data[sent_i]["config"] == "clear_crop") {
+        //     for (let i = metadata["labels"].length - 1; i >= 0; i--) {
+        //         $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/clear_crop_" + i.toString() + ".jpg'>")
+        //     }
         } else if (data[sent_i]["config"] == "labels_crop") {
             for (let i = metadata["labels"].length - 1; i >= 0; i--) {
                 $("#multimodality").append("<img src='" + IMGDATA_ROOT + data[sent_i]["id"].toString() + "/labels_crop_" + i.toString() + ".jpg'>")
@@ -90,7 +91,7 @@ function next_sentence() {
         } else if (data[sent_i]["config"] == "labels_text") {
             $("#multimodality").html(metadata["labels"].map((label: string) => label.split(" ")[0]).join(", "))
         } else if (data[sent_i]["config"] == "no_image") {
-            $("#multimodality").append("<img src='img/no_image.png'>")
+            $("#multimodality").append("(no image)")
         }
         update_sentence_display()
     })

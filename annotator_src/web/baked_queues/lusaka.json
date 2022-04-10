@@ -4,67 +4,67 @@
         "config": "original"
     },
     {
-        "id": "000000397133",
+        "id": "000000450202",
         "config": "labels_crop"
     },
     {
-        "id": "000000037777",
-        "config": "no_image"
-    },
-    {
-        "id": "000000252219",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000087038",
-        "config": "no_image"
-    },
-    {
-        "id": "000000174482",
+        "id": "000000025603",
         "config": "original"
     },
     {
-        "id": "000000403385",
-        "config": "no_image"
+        "id": "000000579307",
+        "config": "labels_text"
     },
     {
-        "id": "000000006818",
+        "id": "000000437898",
+        "config": "original"
+    },
+    {
+        "id": "000000399296",
+        "config": "original"
+    },
+    {
+        "id": "000000062554",
         "config": "labels_all"
     },
     {
-        "id": "000000480985",
+        "id": "000000073118",
         "config": "labels_text"
     },
     {
-        "id": "000000458054",
+        "id": "000000493442",
         "config": "labels_crop"
     },
     {
-        "id": "000000331352",
-        "config": "original"
-    },
-    {
-        "id": "000000491497",
+        "id": "000000438304",
         "config": "labels_crop"
     },
     {
-        "id": "000000348881",
-        "config": "original"
-    },
-    {
-        "id": "000000181666",
+        "id": "000000325527",
         "config": "labels_text"
     },
     {
-        "id": "000000303818",
-        "config": "clear_all"
-    },
-    {
-        "id": "000000460347",
+        "id": "000000389109",
         "config": "no_image"
     },
     {
-        "id": "000000308394",
+        "id": "000000008021",
+        "config": "original"
+    },
+    {
+        "id": "000000244411",
         "config": "labels_crop"
+    },
+    {
+        "id": "000000384666",
+        "config": "labels_text"
+    },
+    {
+        "id": "000000529148",
+        "config": "no_image"
+    },
+    {
+        "id": "000000344268",
+        "config": "labels_text"
     }
 ]

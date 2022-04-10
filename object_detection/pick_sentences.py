@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 import json
-import pickle
-import os
 from collections import Counter, defaultdict
-import matplotlib.pyplot as plt
 from argparse import ArgumentParser
+import random
 
 args = ArgumentParser()
 args.add_argument("-d", "--dev", action="store_true")
@@ -25,32 +23,51 @@ buckets_to_fulfill = defaultdict(lambda: 0) | {
     15: 2,
 }
 used_imgs = set()
-ANN_BAN = {407404, 22951}
+ANN_BAN = {407404, 22951, 601937, 164522, 610124, 733653, 825720, 706927}
+IMG_BAN = {}
 buckets = []
 
 with open("captions_val2017.json", "r") as f:
     data_coco = json.load(f)
 
+random.seed(0)
+random.shuffle(data_coco["images"])
+
 print("Total count:", len(data_coco["images"]))
 
-for img_i, img in enumerate(data_coco["images"][(50 if args.dev else 0):]):
+def filter_ann(ann):
+    if ann["caption"].isupper():
+        return False
+    if "  " in ann["caption"]:
+        return False
+    if not ann["caption"][0].isupper() or not ann["caption"][0].isalpha():
+        return False
+    if ann["id"] in ANN_BAN:
+        return False
+    if "toilet" in ann["caption"]:
+        return False
+    if ann["caption"].count(".") != 1:
+        return False
+    return True
+
+for img_i, img in enumerate(data_coco["images"][(250 if args.dev else 0):]):
     # this is an inefficient but quick way to match annotations
     # ann["caption"] and ann["id"]
     captions = [{
             "url": img["coco_url"],
             "ann_id": ann["id"],
             "img_id": ann["image_id"],
-            "caption": ann["caption"],
+            "caption": ann["caption"].strip(),
             "length": len(ann["caption"].split()),
         }
         for ann in data_coco["annotations"]
-        if img["id"] == ann["image_id"] and not ann["caption"].isupper() and "  " not in ann["caption"]
+        if img["id"] == ann["image_id"] and ann["image_id"] not in IMG_BAN and filter_ann(ann)
     ]
 
     lengths.update([ann["length"] for ann in captions])
 
     for ann in captions:
-        if (buckets_to_fulfill[ann["length"]] > 0) and (ann["img_id"] not in used_imgs) and (ann["ann_id"] not in ANN_BAN):
+        if (buckets_to_fulfill[ann["length"]] > 0) and (ann["img_id"] not in used_imgs):
             used_imgs.add(ann["img_id"])
             buckets.append(ann)
             buckets_to_fulfill[ann["length"]] -= 1

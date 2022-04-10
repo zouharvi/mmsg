@@ -4,67 +4,67 @@
         "config": "original"
     },
     {
-        "id": "000000475779",
-        "config": "no_image"
-    },
-    {
-        "id": "000000301867",
-        "config": "original"
-    },
-    {
-        "id": "000000312421",
+        "id": "000000493799",
         "config": "labels_crop"
     },
     {
-        "id": "000000185250",
-        "config": "labels_crop"
-    },
-    {
-        "id": "000000356427",
-        "config": "labels_crop"
-    },
-    {
-        "id": "000000572517",
-        "config": "original"
-    },
-    {
-        "id": "000000270244",
-        "config": "labels_all"
-    },
-    {
-        "id": "000000125211",
-        "config": "no_image"
-    },
-    {
-        "id": "000000562121",
-        "config": "no_image"
-    },
-    {
-        "id": "000000016228",
-        "config": "labels_crop"
-    },
-    {
-        "id": "000000266409",
-        "config": "clear_all"
-    },
-    {
-        "id": "000000476258",
-        "config": "labels_crop"
-    },
-    {
-        "id": "000000349860",
+        "id": "000000430377",
         "config": "labels_text"
     },
     {
-        "id": "000000486438",
+        "id": "000000156071",
         "config": "labels_crop"
     },
     {
-        "id": "000000502737",
+        "id": "000000319617",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000562843",
         "config": "labels_crop"
     },
     {
-        "id": "000000355257",
+        "id": "000000569972",
+        "config": "labels_text"
+    },
+    {
+        "id": "000000410880",
+        "config": "labels_text"
+    },
+    {
+        "id": "000000314541",
+        "config": "no_image"
+    },
+    {
+        "id": "000000464476",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000002473",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000031118",
+        "config": "original"
+    },
+    {
+        "id": "000000230993",
+        "config": "no_image"
+    },
+    {
+        "id": "000000400082",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000146498",
+        "config": "original"
+    },
+    {
+        "id": "000000218362",
+        "config": "labels_crop"
+    },
+    {
+        "id": "000000348708",
         "config": "no_image"
     }
 ]

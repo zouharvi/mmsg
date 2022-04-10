@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto&display=swap'>
-    <link rel='stylesheet' type='text/css' href='style.css?r=4'>
+    <link rel='stylesheet' type='text/css' href='style.css?r=5'>
 </head>
 
 <body style='text-align: center; margin-bottom: 20px; background-color: #f4f4f4;'>
@@ -29,44 +29,54 @@
 
         <div id="buttons_selfeval">
             <p style="margin-top: 120px;">Please evaluate your prediction:</p>
-            <input id="button_se_0" style="background-color: rgb(214, 150, 150)" type="button" value="(x) Unable to evaluate">
-            <input id="button_se_1" style="background-color: rgb(224, 204, 162)" type="button" value="(1) I was very wrong">
-            <input id="button_se_2" style="background-color: rgb(227, 233, 151)" type="button" value="(2) Wrong but the idea was right">
-            <input id="button_se_3" style="background-color: rgb(153, 206, 153)" type="button" value="(3) Very close">
-            <input id="button_se_4" style="background-color: rgb(90, 196, 76)" type="button" value="(4) Completely right">
+            <input id="button_se_m" style="background-color: rgb(199, 199, 199)" type="button" value="Unable to evaluate">
+            <input id="button_se_0" style="background-color: rgb(214, 150, 150)" type="button" value="(0) Could not be more wrong (wrong area and POS)">
+            <input id="button_se_1" style="background-color: rgb(224, 204, 162)" type="button" value="(1) Very wrong but some aspects close (e.g. POS)">
+            <input id="button_se_2" style="background-color: rgb(227, 233, 151)" type="button" value="(2) Wrong but the idea was roughly right">
+            <input id="button_se_3" style="background-color: rgb(153, 206, 153)" type="button" value="(3) Very close (same area and POS)">
+            <input id="button_se_4" style="background-color: rgb(90, 196, 76)" type="button" value="(4) Exact match">
         </div>
         
         
         <br>
         
-        <div id="buttons_panel" style="display: inline-block; width: 360px;">
-            <div id="buttons_rate">        
-                Confidence:
-                <input id="button_0" style="background-color: rgb(214, 150, 150)" type="button" value="0">
-                <input id="button_1" style="background-color: rgb(224, 204, 162)" type="button" value="1">
-                <input id="button_2" style="background-color: rgb(227, 233, 151)" type="button" value="2">
-                <input id="button_3" style="background-color: rgb(153, 206, 153)" type="button" value="3">
-                <input id="button_4" style="background-color: rgb(90, 196, 76)" type="button" value="4">
+        <div style="height: 40px;">
+            <div id="buttons_panel" style="display: inline-block; width: 360px;">
+                <div id="buttons_rate">        
+                    Confidence:
+                    <input id="button_0" style="background-color: rgb(214, 150, 150)" type="button" value="0">
+                    <input id="button_1" style="background-color: rgb(224, 204, 162)" type="button" value="1">
+                    <input id="button_2" style="background-color: rgb(227, 233, 151)" type="button" value="2">
+                    <input id="button_3" style="background-color: rgb(153, 206, 153)" type="button" value="3">
+                    <input id="button_4" style="background-color: rgb(90, 196, 76)" type="button" value="4">
+                </div>
+                <input id="button_next" style="background-color: rgb(218, 218, 218)" type="button" value="Next sentence">
             </div>
-            <input id="button_next" style="background-color: rgb(218, 218, 218)" type="button" value="Next sentence">
-        </div>
-        <div style="float: right">
-            <div id="config_info" style="display: inline-block; text-align: right;"></div>
-            <div id="progress" style="display: inline-block; width: 50px; text-align: right;">1/x</div>
+            <div style="float: right">
+                <div id="config_info" style="display: inline-block; text-align: right;"></div>
+                <div id="progress" style="display: inline-block; width: 50px; text-align: right;">1/x</div>
+            </div>
         </div>
             
         <div style="margin-top: 50px; text-align: justify;">
             In this experiment you're going to be predicting the next word in a sentence, starting with the first word.
-            Your task is to think about the next word (a specific word) and then click a number corresponding to how confident you are in your prediction.
-            Value <u>0</u> means that you have no idea about the next word while <u>4</u> means that you are absolutely confident in your prediction.
+            Your task is to think about the next word (a specific word) and then click a number corresponding to how confident you are in your prediction:
+            <ul>
+                <li>0: You have no idea about the next word</li>
+                <li>1: You know at least what part-of-speech the next word probably is</li>
+                <li>2: You know roughly what areas of words to expect</li>
+                <li>3: You know the next word or some variations of it</li>
+                <li>4: You know the next word precisely</li>
+            </ul>
             Afterwards, the word is shown and you should evaluate how close your prediction was.
-            Some of the sentences may be accompanied by images, labelled images, a set of labels or snippets of items.
+            Some of the sentences may be accompanied by images, labelled images, a set of labels or snippets of items (you may need to scroll down to see all).
             You should use these to improve your prediction.
             <br>
             <br>
             The whole session should not last longer than 20-30 minutes.
             Please take breaks only after you just finished your sentence, before clicking <u>next sentence</u>.
             This is important as we are evaluating also the reaction times.
+            Do not close this window throughout the experiment as your progress would be lost.
             <br>
             <br>
             This experiment is done by <a href="https://ufal.mff.cuni.cz/" style="color: black; font-weight: bold;">ÚFAL @ Charles University</a> by Sunit Bhattacharya, Vilém Zouhar and Ondřej Bojar.
@@ -76,6 +86,6 @@
 
     
     <!-- <script src='mmsg-web.js?random=<?php echo filemtime('mmsg-web.js'); ?>'></script> -->
-    <script src='mmsg-web.js?r=4'></script>
+    <script src='mmsg-web.js?r=5'></script>
 </body>
 </html>

@@ -4,67 +4,67 @@
         "config": "original"
     },
     {
-        "id": "000000397133",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000037777",
+        "id": "000000450202",
         "config": "labels_crop"
     },
     {
-        "id": "000000252219",
-        "config": "no_image"
+        "id": "000000025603",
+        "config": "labels_crop"
     },
     {
-        "id": "000000087038",
-        "config": "clear_all"
-    },
-    {
-        "id": "000000174482",
+        "id": "000000579307",
         "config": "original"
     },
     {
-        "id": "000000403385",
+        "id": "000000437898",
         "config": "labels_all"
     },
     {
-        "id": "000000006818",
+        "id": "000000399296",
+        "config": "labels_text"
+    },
+    {
+        "id": "000000062554",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000073118",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000493442",
+        "config": "labels_all"
+    },
+    {
+        "id": "000000438304",
+        "config": "no_image"
+    },
+    {
+        "id": "000000325527",
+        "config": "no_image"
+    },
+    {
+        "id": "000000389109",
+        "config": "original"
+    },
+    {
+        "id": "000000008021",
+        "config": "no_image"
+    },
+    {
+        "id": "000000244411",
         "config": "labels_crop"
     },
     {
-        "id": "000000480985",
-        "config": "clear_all"
-    },
-    {
-        "id": "000000458054",
-        "config": "original"
-    },
-    {
-        "id": "000000331352",
-        "config": "clear_all"
-    },
-    {
-        "id": "000000491497",
+        "id": "000000384666",
         "config": "no_image"
     },
     {
-        "id": "000000348881",
-        "config": "no_image"
-    },
-    {
-        "id": "000000181666",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000303818",
+        "id": "000000529148",
         "config": "original"
     },
     {
-        "id": "000000460347",
-        "config": "labels_text"
-    },
-    {
-        "id": "000000308394",
-        "config": "clear_all"
+        "id": "000000344268",
+        "config": "no_image"
     }
 ]

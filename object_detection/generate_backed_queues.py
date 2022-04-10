@@ -4,7 +4,6 @@ import json
 import pickle
 import os
 from collections import Counter, defaultdict
-import matplotlib.pyplot as plt
 from argparse import ArgumentParser
 import random
 
@@ -21,6 +20,9 @@ UID = [
     "caracas", "montevideo", "washington", "kampala", "funafuti",
     "ashgabat", "ankara", "tiraspol", "lome", "bangkok",
     "dodoma", "dushanbe", "damascus", "bern", "stockholm",
+    "paramaribo", "khartoum", "madrid", "juba", "seoul",
+    "pretoria", "hargeisa", "mogadishu", "honiara", "ljubljana",
+    "bratislava", "philipsburg", "singapore", "freetown", "belgrade",
 ]
 UID_dev = [
     "zimbabwe", "zambia", "yemen", "wales", "venezuela",
@@ -28,7 +30,7 @@ UID_dev = [
 ]
 CONFIGS = [
     "labels_crop", "labels_all", "labels_text",
-    "clear_all", "no_image", "original",
+    "no_image", "original",
 ]
 
 if args.dev:

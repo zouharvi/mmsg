@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 import torch
-import pandas as pd
 import json
-import pickle
 from PIL import Image, ImageDraw, ImageFont
 import os
 from argparse import ArgumentParser
 from copy import deepcopy
+from tqdm import tqdm
 
 # labels
 # model.names
@@ -25,9 +24,9 @@ data_detection = results.pandas().xyxy
 results = results.tolist()
 
 os.makedirs("img_data", exist_ok=True)
-font = ImageFont.truetype('FreeMono.ttf', 20)
+font = ImageFont.truetype('FreeMono.ttf', 16)
 
-for i, (img, result) in enumerate(zip(data_control, results)):
+for i, (img, result) in tqdm(enumerate(zip(data_control, results))):
     str_id = img["url"].split("/")[-1]
     img_dir = "img_data/" + str_id.rstrip(".jpg") + "/"
     os.makedirs(img_dir, exist_ok=True)
@@ -41,10 +40,10 @@ for i, (img, result) in enumerate(zip(data_control, results)):
     result_la = Image.fromarray(result_la.imgs[0])
     result_la.save(img_dir + "labels_all.jpg")
 
-    result_ca = deepcopy(result)
-    result_ca.display(labels=False, crop=False, save=False, render=True)
-    result_ca = Image.fromarray(result_ca.imgs[0])
-    result_ca.save(img_dir + "clear_all.jpg")
+    # result_ca = deepcopy(result)
+    # result_ca.display(labels=False, crop=False, save=False, render=True)
+    # result_ca = Image.fromarray(result_ca.imgs[0])
+    # result_ca.save(img_dir + "clear_all.jpg")
 
     result_lc = deepcopy(result)
     result_lc = result_lc.display(
@@ -62,22 +61,23 @@ for i, (img, result) in enumerate(zip(data_control, results)):
             int(crop["box"][3]),
         ))
 
-        min_width = font.getsize(crop["label"])[0]+5
+        label_txt = crop["label"].split(" ")[0]
+        min_width = font.getsize(label_txt)[0]+5
         scale = min_width/float(crop["box"][2]-crop["box"][0])
 
         tmp = tmp.resize((
             int(tmp.width * scale),
             int((tmp.height-20) * scale + 20),
         ))
-        tmp.save(img_dir + f"clear_crop_{i}.jpg")
+        # tmp.save(img_dir + f"clear_crop_{i}.jpg")
 
         drawer = ImageDraw.Draw(tmp)
         drawer.rectangle(
             ((0, 0),
-            (tmp.width, 20)),
+            (tmp.width, 17)),
             fill="black"
         )
-        drawer.text((0,0), crop["label"], fill="white", font=font)
+        drawer.text((0,0), label_txt, fill="white", font=font)
         tmp.save(img_dir + f"labels_crop_{i}.jpg")
 
     with open(img_dir+"meta.json", "w") as f:
