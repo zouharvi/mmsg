@@ -35,7 +35,7 @@ def load_logs(uids=None):
 
     data = []
     for uid in uids:
-        with open(f"data/{uid}.jsonl", "r") as f:
+        with open(f"{uid}", "r") as f:
             data_local = [{
                 "uid": uid,
                 **json.loads(line)
