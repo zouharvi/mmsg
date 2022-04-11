@@ -2,4 +2,4 @@
 
 mkdir -p data
 
-scp -r mmsg:multimodal-shannon-game/logs data
+scp mmsg:multimodal-shannon-game/logs/*.jsonl data

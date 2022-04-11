@@ -1,6 +1,7 @@
 import json
 from collections import defaultdict
 import numpy as np
+from glob import glob
 
 
 def time_filter(v, med, cap=20):
@@ -29,7 +30,8 @@ def process_time(ratings):
 
 def load_logs(uids=None):
     if uids is None:
-        raise Exception("Not implemented yet")
+        uids = glob("data/*.jsonl")
+    
 
     data = []
     for uid in uids:

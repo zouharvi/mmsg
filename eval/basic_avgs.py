@@ -4,7 +4,7 @@ from utils import *
 import numpy as np
 import scipy.stats as st
 
-data = collate_classes(load_logs(["lusaka"]))
+data = collate_classes(load_logs())
 
 def flatten_second(data):
     return {
