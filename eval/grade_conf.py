@@ -11,7 +11,7 @@ from collections import Counter
 
 data = collate_classes(load_logs())
 
-fig, ax = plt.subplots(ncols=5, figsize=(11, 2.6))
+fig, ax = plt.subplots(ncols=5, figsize=(11, 1.95))
 
 def config_tilemap(data, ax_i, name=""):
     counts = Counter({(x0, x1):0 for x0 in range(5) for x1 in range(5)})
@@ -25,7 +25,8 @@ def config_tilemap(data, ax_i, name=""):
 
     img_render = ax[ax_i].imshow(
         np.sqrt(img), origin="lower", cmap="viridis",
-        norm=Normalize(vmin=0, vmax=8, clip=True)
+        norm=Normalize(vmin=0, vmax=8, clip=True),
+        aspect=0.7
     )
 
     for (x0, x1), v in counts.items():

@@ -19,7 +19,7 @@ def flatten_second(data):
         for config in ORDER
     }
 
-fig = plt.figure(figsize=(5, 3))
+fig = plt.figure(figsize=(5, 2.95))
 ax1 = fig.gca()
 ax2 = ax1.twinx()
 
@@ -69,7 +69,7 @@ h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
 plt.legend(
     h1 + h2, l1 + l2,
-    ncol=2, bbox_to_anchor=(0.04, 1.3),
+    ncol=2, bbox_to_anchor=(0.04, 1.33),
     loc="upper left",
 )
 

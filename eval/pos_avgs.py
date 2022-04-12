@@ -47,7 +47,7 @@ def classify_pos(pos):
         return "Other"
 
 
-fig = plt.figure(figsize=(5, 4))
+fig = plt.figure(figsize=(5, 3))
 ax1 = fig.gca()
 # plt.rcParams['hatch.linewidth'] = 0.5
 
@@ -99,9 +99,9 @@ if args.self_eval:
 else:
     ax1.set_ylabel("Confidence")
 
-plt.tight_layout(pad=0.01, rect=(0, 0, 1, 0.9))
+plt.tight_layout(pad=0.01, rect=(0, 0, 1, 0.88))
 plt.legend(
-    ncol=4, bbox_to_anchor=(0.00, 1.12),
+    ncol=4, bbox_to_anchor=(0.00, 1.18),
     loc="upper left",
 )
 

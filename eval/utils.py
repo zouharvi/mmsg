@@ -4,7 +4,7 @@ import numpy as np
 from glob import glob
 
 
-def time_filter(v, med, cap=20):
+def time_filter(v, med, cap=15):
     if v > cap:
         return med
     return v
@@ -37,8 +37,8 @@ def load_logs(uids=None):
 
     data = []
     for uid in uids:
-        # hard remove tuvaul
-        if "tuvalu" in uid:
+        # hard remove tuvaul and yemen
+        if "tuvalu" in uid or "yemen" in uid:
             continue
 
         with open(f"{uid}", "r") as f:
