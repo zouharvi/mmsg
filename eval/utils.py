@@ -31,10 +31,16 @@ def process_time(ratings):
 def load_logs(uids=None):
     if uids is None:
         uids = glob("data/*.jsonl")
+    else:
+        uids = [f"data/{uid}.jsonl" for uid in uids]
     
 
     data = []
     for uid in uids:
+        # hard remove tuvaul
+        if "tuvalu" in uid:
+            continue
+
         with open(f"{uid}", "r") as f:
             data_local = [{
                 "uid": uid,
