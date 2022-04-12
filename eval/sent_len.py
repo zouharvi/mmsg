@@ -19,7 +19,7 @@ def flatten_second(data):
         for config in ORDER
     }
 
-fig = plt.figure(figsize=(5, 4))
+fig = plt.figure(figsize=(5, 3))
 ax1 = fig.gca()
 ax2 = ax1.twinx()
 
@@ -28,6 +28,20 @@ def sent_len(getter=lambda x: None, name="", linestyle="-", color="black", ax=ax
     for subdata in data.values():
         for sent in subdata["ratings"]:
             for word_i, word in enumerate(sent):
+                if word_i == 0:
+                    word_i = 0
+                elif word_i/(len(sent)-1) < 0.25:
+                    word_i = 1
+                elif word_i/(len(sent)-1) < 0.5:
+                    word_i = 2
+                elif word_i/(len(sent)-1) < 0.75:
+                    word_i = 3
+                elif word_i/(len(sent)-1) < 1:
+                    word_i = 4
+                elif word_i == len(sent)-1:
+                    word_i = 5
+                else:
+                    raise Exception("TODO")
                 counts[word_i].append(getter(word))
     
     ax.plot(
@@ -45,13 +59,17 @@ ax1.set_ylabel("Rating")
 ax1.set_xlabel("Sentence length")
 ax2.set_ylabel("Time (s)")
 
-plt.tight_layout(pad=0, rect=(0, 0, 1, 0.85))
+XTICK_LABELS = ["$=0\%$", "$<25\%$", "$<50\%$", "$<75\%$", "$<100\%$", "$=100\%$"]
+ax1.set_xticks(list(range(len(XTICK_LABELS))))
+ax1.set_xticklabels(XTICK_LABELS)
+
+plt.tight_layout(pad=0, rect=(0, 0, 1, 0.8))
 
 h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
 plt.legend(
     h1 + h2, l1 + l2,
-    ncol=2, bbox_to_anchor=(0.04, 1.2),
+    ncol=2, bbox_to_anchor=(0.04, 1.3),
     loc="upper left",
 )
 
