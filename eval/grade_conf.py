@@ -11,13 +11,20 @@ from collections import Counter
 
 data = collate_classes(load_logs())
 
-fig, ax = plt.subplots(ncols=5, figsize=(11, 1.95))
+fig, ax = plt.subplots(ncols=5, figsize=(11.2, 1.95))
 
 def config_tilemap(data, ax_i, name=""):
     counts = Counter({(x0, x1):0 for x0 in range(5) for x1 in range(5)})
+    x0 = []
+    x1 = []
     for sent in data:
         counts.update([(word[0][1], word[1][1]) for word in sent])
-    img = np.zeros((5, 5), dtype=np.int)
+        x0 += [word[0][1] for word in sent]
+        x1 += [word[1][1] for word in sent]
+    img = np.zeros((5, 5), dtype=np.int32)
+
+    corr = np.corrcoef(x0, x1)[0,1]
+
     for (x0, x1), v in counts.items():
         if x1 == -1:
             continue
@@ -37,7 +44,7 @@ def config_tilemap(data, ax_i, name=""):
                 color="black" if v > 3 else "lightgray"
             )
 
-    ax[ax_i].set_xlabel(r"$\bf{" + name.replace('_', '\,\,').capitalize() + "}$ (confidence)")
+    ax[ax_i].set_xlabel(r"$\bf{" + name.replace('_', '\,\,').capitalize() + "}$, " + f"$\\rho={corr:.2f}$")
     if ax_i == 0:
         # cbar = ax[ax_i].figure.colorbar(img_render)
         ax[ax_i].set_ylabel("Self-evaluation")
