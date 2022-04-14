@@ -11,7 +11,7 @@ from collections import Counter
 
 data = collate_classes(load_logs())
 
-fig, ax = plt.subplots(ncols=5, figsize=(11.2, 1.95))
+fig, ax = plt.subplots(ncols=5, figsize=(11.3, 1.7))
 
 def config_tilemap(data, ax_i, name=""):
     counts = Counter({(x0, x1):0 for x0 in range(5) for x1 in range(5)})
@@ -44,7 +44,13 @@ def config_tilemap(data, ax_i, name=""):
                 color="black" if v > 3 else "lightgray"
             )
 
-    ax[ax_i].set_xlabel(r"$\bf{" + name.replace('_', '\,\,').capitalize() + "}$, " + f"$\\rho={corr:.2f}$")
+    ax[ax_i].set_xlabel(
+        r"$\bf{" + name.replace('_', '\,\,').capitalize() + "}$, " + f"$\\rho={corr:.2f}$",
+        labelpad=0.0
+    )
+    ax[ax_i].set_xticks(
+        list(range(5)),
+    )
     if ax_i == 0:
         # cbar = ax[ax_i].figure.colorbar(img_render)
         ax[ax_i].set_ylabel("Self-evaluation")
@@ -60,6 +66,6 @@ config_tilemap(data["labels_all"]["ratings"], ax_i=2, name="labels_all")
 config_tilemap(data["labels_crop"]["ratings"], ax_i=3, name="labels_crop")
 config_tilemap(data["labels_text"]["ratings"], ax_i=4, name="labels_text")
 
-plt.tight_layout(pad=0.1, rect=(0, 0, 1, 1.12))
+plt.tight_layout(pad=0.05, rect=(0, 0.05, 1, 1.00))
 plt.savefig(os.environ['HOME'] + "/Downloads/grade_conf.pdf")
 plt.show()
