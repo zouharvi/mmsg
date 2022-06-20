@@ -37,7 +37,7 @@ def avg_pprint(data, name=""):
     print()
 
 
-fig = plt.figure(figsize=(5, 3.3))
+fig = plt.figure(figsize=(5, 2.9))
 ax1 = fig.gca()
 ax2 = ax1.twinx()
 plt.rcParams['hatch.linewidth'] = 0.5
@@ -125,10 +125,10 @@ ax2.set_ylabel("Time (s)")
 h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
 
-plt.tight_layout(pad=0, rect=(0, 0, 1, 0.83))
+plt.tight_layout(pad=0, rect=(0, 0, 1, 0.81))
 plt.legend(
     h1 + h2, l1 + l2,
-    ncol=2, bbox_to_anchor=(0.04, 1.25),
+    ncol=2, bbox_to_anchor=(0.04, 1.3),
     loc="upper left",
 )
 plt.savefig(os.environ['HOME'] + "/Downloads/basic_avgs.pdf")

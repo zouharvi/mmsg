@@ -47,7 +47,7 @@ def classify_pos(pos):
         return "Other"
 
 
-fig = plt.figure(figsize=(5, 3))
+fig = plt.figure(figsize=(5, 2.6))
 ax1 = fig.gca()
 # plt.rcParams['hatch.linewidth'] = 0.5
 

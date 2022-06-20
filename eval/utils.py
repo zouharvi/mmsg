@@ -30,7 +30,7 @@ def process_time(ratings):
 
 def load_logs(uids=None):
     if uids is None:
-        uids = glob("data/*.jsonl")
+        uids = glob("data/v1/*.jsonl")
     else:
         uids = [f"data/{uid}.jsonl" for uid in uids]
     
@@ -38,7 +38,7 @@ def load_logs(uids=None):
     data = []
     for uid in uids:
         # hard remove tuvaul and yemen
-        if "tuvalu" in uid or "yemen" in uid:
+        if "tuvalu" in uid or "yemen" in uid or "zimbabwe" in uid:
             continue
 
         with open(f"{uid}", "r") as f:
@@ -55,6 +55,11 @@ def load_logs(uids=None):
             data += data_local
     return data
 
+
+def load_logs_machine(model):
+    with open(f"data/v1/machine_stats.json", "r") as f:
+        data = json.load(f)["temp_1.0"][model]
+    return data
 
 def collate_classes(data):
     data_c = defaultdict(lambda: defaultdict(list))
