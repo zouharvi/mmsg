@@ -11,6 +11,7 @@ data = collate_classes(load_logs())
 
 ORDER = ['no_image', 'original', 'labels_all', 'labels_crop', 'labels_text']
 
+
 def flatten_second(data):
     return {
         config: [x for sent in data[config] for x in sent]
@@ -37,10 +38,11 @@ def avg_pprint(data, name=""):
     print()
 
 
-fig = plt.figure(figsize=(5, 2.9))
+fig = plt.figure(figsize=(5, 2.8))
 ax1 = fig.gca()
 ax2 = ax1.twinx()
 plt.rcParams['hatch.linewidth'] = 0.5
+
 
 def avg_plotbar(data, name="", i=0, color="black", hatch="", ax=ax1):
     ax.bar(
@@ -80,7 +82,10 @@ data_conf_time = flatten_second({
 
 # self-eval
 data_eval = flatten_second({
-    config: [[x[1][1] for x in sent if x[1][1] >= 0] for sent in lll["ratings"]]
+    config: [
+        [x[1][1] for x in sent if x[1][1] >= 0]
+        for sent in lll["ratings"]
+    ]
     for config, lll in data.items()
 })
 data_eval_time = flatten_second({
@@ -108,17 +113,17 @@ avg_plotbar(
     i=3, color="salmon", hatch="..", ax=ax2,
 )
 
-XTICK_LABELS = ['No_image', '\nOriginal', 'Labels_all', '\nLabels_crop', 'Labels_text']
+XTICK_LABELS = [
+    'No_image', '\nOriginal',
+    'Labels_all', '\nLabels_crop', 'Labels_text',
+]
 
-plt.xticks(
+ax1.set_xticks(
     list(range(len(XTICK_LABELS))),
     [x.replace("_", " ") for x in XTICK_LABELS],
+    linespacing=0.3,
 )
 
-print(data_conf.keys())
-print(data_eval.keys())
-print(data_conf_time.keys())
-print(data_eval_time.keys())
 ax1.set_ylabel("Rating")
 ax2.set_ylabel("Time (s)")
 

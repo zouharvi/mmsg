@@ -47,7 +47,7 @@ def classify_pos(pos):
         return "Other"
 
 
-fig = plt.figure(figsize=(5, 2.6))
+fig = plt.figure(figsize=(5, 2.5))
 ax1 = fig.gca()
 # plt.rcParams['hatch.linewidth'] = 0.5
 
@@ -92,6 +92,7 @@ XTICK_LABELS = [
 plt.xticks(
     list(range(len(XTICK_LABELS))),
     [x.replace("_", " ") for x in XTICK_LABELS],
+    linespacing=0.2,
 )
 
 if args.self_eval:
@@ -101,7 +102,7 @@ else:
 
 plt.tight_layout(pad=0.01, rect=(0, 0, 1, 0.88))
 plt.legend(
-    ncol=4, bbox_to_anchor=(0.00, 1.18),
+    ncol=4, bbox_to_anchor=(0.00, 1.19),
     loc="upper left",
 )
 
