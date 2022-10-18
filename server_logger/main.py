@@ -2,7 +2,7 @@
 
 from flask import Flask, request
 import json
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from waitress import serve
 import os
 import datetime
@@ -16,7 +16,7 @@ os.makedirs("logs", exist_ok=True)
 def action_log():
     data = request.get_json()
     uid = data.pop("uid")
-    print(f"[{datetime.datetime.now()}] log equest from user {uid}")
+    print(f"[{datetime.datetime.now()}] log request from user {uid}")
     if uid.replace("_", "").isalnum() and len(uid) <= 50:
         with open(f"logs/{uid}.jsonl", "a") as f:
             f.write(json.dumps(data) + "\n")

@@ -30,7 +30,7 @@ def process_time(ratings):
 
 def load_logs(uids=None):
     if uids is None:
-        uids = glob("data/v1/*.jsonl")
+        uids = glob("data/v1/*.jsonl") + glob("data/v2/*.jsonl")
     else:
         uids = [f"data/{uid}.jsonl" for uid in uids]
     

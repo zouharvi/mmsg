@@ -28,7 +28,7 @@ def flatten_second(data):
 
 def confidence(vals):
     return st.t.interval(
-        alpha=0.95,
+        confidence=0.95,
         df=len(vals) - 1,
         loc=np.mean(vals),
         scale=st.sem(vals)

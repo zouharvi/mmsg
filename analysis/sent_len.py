@@ -2,9 +2,7 @@
 
 from utils import *
 import numpy as np
-import scipy.stats as st
 import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize
 import fig_utils
 import os
 from collections import defaultdict
@@ -63,7 +61,7 @@ XTICK_LABELS = ["$=0\%$", "$<25\%$", "$<50\%$", "$<75\%$", "$<100\%$", "$=100\%$
 ax1.set_xticks(list(range(len(XTICK_LABELS))))
 ax1.set_xticklabels(XTICK_LABELS)
 
-plt.tight_layout(pad=0, rect=(0, 0, 1, 0.8))
+plt.tight_layout(pad=0, rect=(0.02, 0, 1.02, 0.8))
 
 h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
