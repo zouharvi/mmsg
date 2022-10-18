@@ -21,27 +21,28 @@ def config_tilemap(data, ax_i, name=""):
         counts.update([(word[0][1], word[1][1]) for word in sent])
         x0 += [word[0][1] for word in sent]
         x1 += [word[1][1] for word in sent]
-    img = np.zeros((5, 5), dtype=np.int32)
+    img = np.zeros((5, 5), dtype=np.float64)
 
     corr = np.corrcoef(x0, x1)[0,1]
+    total = sum(counts.values())
 
     for (x0, x1), v in counts.items():
         if x1 == -1:
             continue
-        img[x0, x1] = v
+        img[x0, x1] = v/total
 
-    img_render = ax[ax_i].imshow(
-        np.sqrt(img), origin="lower", cmap="viridis",
-        norm=Normalize(vmin=0, vmax=8, clip=True),
+    ax[ax_i].imshow(
+        img, origin="lower", cmap="Greens",
+        norm=Normalize(vmin=0, vmax=0.12, clip=True),
         aspect=0.7
     )
 
     for (x0, x1), v in counts.items():
         if x1 != -1:
             ax[ax_i].text(
-                x1, x0, v,
+                x1, x0, f"{v/total:.2f}".replace("0.", "."),
                 ha="center", va="center",
-                color="black" if v > 3 else "lightgray"
+                color="black" if v/total < 0.1 else "lightgray"
             )
 
     ax[ax_i].set_xlabel(
