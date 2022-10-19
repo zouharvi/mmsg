@@ -2,7 +2,6 @@
 
 from utils import *
 import numpy as np
-import os
 
 data = load_logs()
 
@@ -13,6 +12,10 @@ for line in data:
 
 print(len(data_uid))
 
+times_all = []
 for uid, uid_v in data_uid.items():
     uid = uid.replace("data/", "").replace(".jsonl", "")
-    print(f"{uid:<15}:", f"{(max(uid_v)-min(uid_v))/1000/60:.0f}m")
+    time_local = (max(uid_v)-min(uid_v))/1000/60
+    print(f"{uid:<15}:", f"{time_local:.0f}m")
+    times_all.append(time_local)
+print(f"\navg:", f"{np.average(times_all):.0f}m")
