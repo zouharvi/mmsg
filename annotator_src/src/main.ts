@@ -127,7 +127,14 @@ $("#button_next").on("click", () => {
 
 // get user id and load queue
 
-if (DEVMODE) {
+// try to see if start override was passed
+const urlParams = new URLSearchParams(window.location.search);
+const startOverride = urlParams.get('start');
+const UIDFromURL = urlParams.get("uid")
+
+if (UIDFromURL != null) {
+    UID = UIDFromURL as string
+} else if (DEVMODE) {
     UID = "tuvalu"
 } else {
     let UID_maybe = null
@@ -136,10 +143,6 @@ if (DEVMODE) {
     }
     UID = UID_maybe!
 }
-
-// try to see if start override was passed
-const urlParams = new URLSearchParams(window.location.search);
-const startOverride = urlParams.get('start');
 
 load_data().catch((_error) => {
     alert("Invalid user id")

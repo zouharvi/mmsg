@@ -1,7 +1,7 @@
 # Multimodal Shannon's Game
 
 Description TODO.
-Visit [vilda.net/s/mmsg/](vilda.net/s/mmsg/) for a live demo (unavailable now).
+Visit [vilda.net/s/mmsg/](https://vilda.net/s/mmsg/?uid=demo) for a live demo using the uid `demo`.
 For more information contact the authors.
 
 ## Sentence Preparation:
